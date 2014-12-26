@@ -143,6 +143,7 @@ Scraper.prototype.page = function (options, callback) {
         if (outerPage) {
           debug('Phantom crashed on page: %s, with title: %s', outerPage.url, outerPage.title);
         }
+        self.bindPhantom(options);
       }
       debug('event=phantomError msg=%s', data);
       //callback(new Error('phantom crashed'));
